@@ -2,7 +2,7 @@
 //  TSNewsEntity+CoreDataClass.swift
 //  
 //
-//  Created by Harshit on 23/08/23.
+//  Created by Harshit Jain on 23/08/23.
 //
 //
 

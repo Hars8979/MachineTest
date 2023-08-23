@@ -2,7 +2,7 @@
 //  TSNewsRepo.swift
 //  TechSaga
 //
-//  Created by Rishabh Jain on 23/08/23.
+//  Created by Harshit Jain on 23/08/23.
 //
 
 import Foundation

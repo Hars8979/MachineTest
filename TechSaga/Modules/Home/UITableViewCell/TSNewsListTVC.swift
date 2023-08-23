@@ -1,14 +1,14 @@
 //
-//  NewsListTVC.swift
+//  TSNewsListTVC.swift
 //  TechSaga
 //
-//  Created by Rishabh Jain on 23/08/23.
+//  Created by Harshit Jain on 23/08/23.
 //
 
 import UIKit
 import SDWebImage
 
-class NewsListTVC: UITableViewCell {
+class TSNewsListTVC: UITableViewCell {
     
     //MARK: - IBOutlets
 
@@ -17,26 +17,16 @@ class NewsListTVC: UITableViewCell {
             cornerView.layer.cornerRadius = 12.0
         }
     }
-    @IBOutlet weak var itemTitleLabel: UILabel!
+
+    
+    
+    @IBOutlet weak var itemTitleLabel: TSLabel!
     @IBOutlet weak var itemImageView: TSImageView!
     @IBOutlet weak var itemNameLabel: UILabel!
-    @IBOutlet weak var itemBoderView: UIView!
     @IBOutlet weak var itemDateLabel: UILabel!
     
-    
     //MARK: - Properties
-    let gradientLayer = CAGradientLayer()
-    override func layoutSublayers(of layer: CALayer) {
-        super.layoutSublayers(of: layer)
-        gradientLayer.frame = itemBoderView.bounds
-                
-                let colorSet = [UIColor(red: 22/255, green: 22/255, blue: 22/255, alpha: 0.0),
-                                UIColor(red: 0/255, green: 0/255, blue: 0/255, alpha: 1.0)]
-                let location = [0.5, 1.0]
-        
-        itemBoderView.addGradient(with: gradientLayer, colorSet: colorSet, locations: location, startEndPoints: (CGPoint(x: 0.5, y: 0.5), CGPoint(x: 0.5, y: 1.0)))
-       
-    }
+  
     var newsArticleData: NewsArticleModel? {
         didSet {
             itemTitleLabel.text = newsArticleData?.title
@@ -73,7 +63,6 @@ class NewsListTVC: UITableViewCell {
         super.prepareForReuse()
         itemImageView.image = nil
     }
-    
 }
 extension UIView {
     func addGradient(with layer: CAGradientLayer, gradientFrame: CGRect? = nil, colorSet: [UIColor],

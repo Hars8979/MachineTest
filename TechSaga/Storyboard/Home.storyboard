@@ -1,13 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21679"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="RobotoSlab-Bold.ttf">
+            <string>RobotoSlab-Bold</string>
+        </array>
+        <array key="RobotoSlab-Regular.ttf">
+            <string>RobotoSlab-Regular</string>
+        </array>
+    </customFonts>
     <scenes>
         <!--Home ViewC-->
         <scene sceneID="s0d-6b-0kx">
@@ -18,7 +27,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="i2x-Rp-bZL">
-                                <rect key="frame" x="0.0" y="59" width="393" height="759"/>
+                                <rect key="frame" x="0.0" y="59" width="393" height="793"/>
                                 <color key="backgroundColor" name="464646"/>
                                 <connections>
                                     <outlet property="dataSource" destination="Y6W-OH-hqX" id="dE5-9B-OT7"/>
@@ -33,7 +42,7 @@
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <color key="backgroundColor" systemColor="labelColor"/>
                         <constraints>
-                            <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="i2x-Rp-bZL" secondAttribute="bottom" id="7pr-fw-fep"/>
+                            <constraint firstAttribute="bottom" secondItem="i2x-Rp-bZL" secondAttribute="bottom" id="7pr-fw-fep"/>
                             <constraint firstItem="i2x-Rp-bZL" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="SOm-3x-7W5"/>
                             <constraint firstItem="O4Z-Bb-qua" firstAttribute="centerY" secondItem="5EZ-qb-Rvc" secondAttribute="centerY" id="hmF-rs-G8j"/>
                             <constraint firstItem="i2x-Rp-bZL" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" id="mnC-XI-qcO"/>
@@ -50,10 +59,94 @@
             </objects>
             <point key="canvasLocation" x="103" y="-2"/>
         </scene>
+        <!--Detail ViewC-->
+        <scene sceneID="elk-Nc-M6n">
+            <objects>
+                <viewController storyboardIdentifier="TSDetailViewC" id="c4b-dB-nLN" customClass="TSDetailViewC" customModule="TechSaga" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="AyD-3V-xif">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="mV8-2O-ZIa" customClass="TSImageView" customModule="TechSaga" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                            </imageView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="z6i-my-Reb">
+                                <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RUV-IE-Fbv" customClass="TSLabel" customModule="TechSaga" customModuleProvider="target">
+                                <rect key="frame" x="12" y="688" width="369" height="0.0"/>
+                                <fontDescription key="fontDescription" name="RobotoSlab-Bold" family="Roboto Slab" pointSize="30"/>
+                                <color key="textColor" name="F2F2F2"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EZy-gt-6x8" customClass="TSLabel" customModule="TechSaga" customModuleProvider="target">
+                                <rect key="frame" x="12" y="788" width="0.0" height="0.0"/>
+                                <fontDescription key="fontDescription" name="RobotoSlab-Bold" family="Roboto Slab" pointSize="20"/>
+                                <color key="textColor" name="F2F2F2"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="n0r-As-hjU" customClass="TSLabel" customModule="TechSaga" customModuleProvider="target">
+                                <rect key="frame" x="381" y="788" width="0.0" height="0.0"/>
+                                <fontDescription key="fontDescription" name="RobotoSlab-Regular" family="Roboto Slab" pointSize="20"/>
+                                <color key="textColor" name="F2F2F2"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9pF-tb-Ygx">
+                                <rect key="frame" x="12" y="794" width="369" height="0.0"/>
+                                <fontDescription key="fontDescription" name="RobotoSlab-Regular" family="Roboto Slab" pointSize="16"/>
+                                <color key="textColor" name="BABABA"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="ZjT-6V-MuE"/>
+                        <color key="backgroundColor" systemColor="labelColor"/>
+                        <constraints>
+                            <constraint firstItem="9pF-tb-Ygx" firstAttribute="leading" secondItem="ZjT-6V-MuE" secondAttribute="leading" constant="12" id="1Je-dD-gfL"/>
+                            <constraint firstItem="z6i-my-Reb" firstAttribute="top" secondItem="AyD-3V-xif" secondAttribute="top" id="2xG-UA-k7u"/>
+                            <constraint firstItem="ZjT-6V-MuE" firstAttribute="trailing" secondItem="mV8-2O-ZIa" secondAttribute="trailing" id="50k-aH-yAZ"/>
+                            <constraint firstItem="ZjT-6V-MuE" firstAttribute="bottom" secondItem="9pF-tb-Ygx" secondAttribute="bottom" constant="24" id="7vo-7d-snd"/>
+                            <constraint firstItem="z6i-my-Reb" firstAttribute="trailing" secondItem="ZjT-6V-MuE" secondAttribute="trailing" id="AeH-JW-hL3"/>
+                            <constraint firstItem="9pF-tb-Ygx" firstAttribute="top" secondItem="EZy-gt-6x8" secondAttribute="bottom" constant="6" id="AzV-DP-Xy3"/>
+                            <constraint firstAttribute="bottom" secondItem="mV8-2O-ZIa" secondAttribute="bottom" id="Cvb-eo-kdV"/>
+                            <constraint firstItem="mV8-2O-ZIa" firstAttribute="leading" secondItem="ZjT-6V-MuE" secondAttribute="leading" id="FC7-c0-Zck"/>
+                            <constraint firstItem="n0r-As-hjU" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="EZy-gt-6x8" secondAttribute="trailing" constant="12" id="KM9-fp-4qZ"/>
+                            <constraint firstItem="mV8-2O-ZIa" firstAttribute="top" secondItem="AyD-3V-xif" secondAttribute="top" id="NTZ-37-8Io"/>
+                            <constraint firstItem="RUV-IE-Fbv" firstAttribute="leading" secondItem="EZy-gt-6x8" secondAttribute="leading" id="QRx-yA-N7I"/>
+                            <constraint firstItem="EZy-gt-6x8" firstAttribute="leading" secondItem="ZjT-6V-MuE" secondAttribute="leading" constant="12" id="TZt-30-HDF"/>
+                            <constraint firstItem="EZy-gt-6x8" firstAttribute="top" secondItem="RUV-IE-Fbv" secondAttribute="bottom" constant="100" id="W2f-Er-BLt"/>
+                            <constraint firstAttribute="bottom" secondItem="z6i-my-Reb" secondAttribute="bottom" id="YEF-Kh-duG"/>
+                            <constraint firstItem="ZjT-6V-MuE" firstAttribute="trailing" secondItem="9pF-tb-Ygx" secondAttribute="trailing" constant="12" id="Zus-bo-I4q"/>
+                            <constraint firstAttribute="trailing" secondItem="RUV-IE-Fbv" secondAttribute="trailing" constant="12" id="aWI-Em-bbR"/>
+                            <constraint firstItem="z6i-my-Reb" firstAttribute="leading" secondItem="ZjT-6V-MuE" secondAttribute="leading" id="aw8-6S-HMy"/>
+                            <constraint firstItem="ZjT-6V-MuE" firstAttribute="trailing" secondItem="n0r-As-hjU" secondAttribute="trailing" constant="12" id="gI4-SA-U7J"/>
+                            <constraint firstItem="n0r-As-hjU" firstAttribute="top" secondItem="EZy-gt-6x8" secondAttribute="top" id="hTt-0H-Vmd"/>
+                            <constraint firstItem="n0r-As-hjU" firstAttribute="bottom" secondItem="EZy-gt-6x8" secondAttribute="bottom" id="ouA-Q1-F4H"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="authorLabel" destination="EZy-gt-6x8" id="EGK-ez-2OB"/>
+                        <outlet property="dateLabel" destination="n0r-As-hjU" id="rlU-DU-CDJ"/>
+                        <outlet property="decsriptionLabel" destination="9pF-tb-Ygx" id="5Cf-PS-s1E"/>
+                        <outlet property="imageView" destination="mV8-2O-ZIa" id="VnQ-3Z-emW"/>
+                        <outlet property="shadowViews" destination="z6i-my-Reb" id="uRc-yb-xbd"/>
+                        <outlet property="titleLabel" destination="RUV-IE-Fbv" id="7G4-sL-zHe"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="99d-3I-hSN" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="773.28244274809163" y="-2.1126760563380285"/>
+        </scene>
     </scenes>
     <resources>
         <namedColor name="464646">
             <color red="0.27450980392156865" green="0.27450980392156865" blue="0.27450980392156865" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="BABABA">
+            <color red="0.72941176470588232" green="0.72941176470588232" blue="0.72941176470588232" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="F2F2F2">
+            <color red="0.94901960784313721" green="0.94901960784313721" blue="0.94901960784313721" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <systemColor name="labelColor">
             <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

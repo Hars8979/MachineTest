@@ -20,10 +20,6 @@ class TSHomeViewC: UIViewController {
     
     var homeViewModel: TSHomeViewModel = TSHomeViewModel()
     
-    override var preferredStatusBarStyle: UIStatusBarStyle {
-        return .lightContent
-    }
-    
     //MARK: - View LifeCycle
 
     override func viewDidLoad() {
@@ -33,11 +29,16 @@ class TSHomeViewC: UIViewController {
         fetchNewsHeadlines()
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        self.navigationController?.navigationBar.isHidden = false
+    }
+    
     fileprivate func tableViewSetup() {
         if #available(iOS 15.0, *) {
             tableView.sectionHeaderTopPadding = 0
         }
-        tableView.register(["NewsListTVC"])
+        tableView.register(["TSNewsListTVC"])
     }
     
     fileprivate func fetchNewsHeadlines() {

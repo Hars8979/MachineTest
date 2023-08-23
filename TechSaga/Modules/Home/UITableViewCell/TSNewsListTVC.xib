@@ -19,7 +19,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" id="KGk-i7-Jjw" customClass="NewsListTVC" customModule="TechSaga" customModuleProvider="target">
+        <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" id="KGk-i7-Jjw" customClass="TSNewsListTVC" customModule="TechSaga" customModuleProvider="target">
             <rect key="frame" x="0.0" y="0.0" width="320" height="250"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
@@ -36,7 +36,7 @@
                                     <constraint firstAttribute="height" constant="226" id="Xgh-ta-Bmh"/>
                                 </constraints>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" " textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="e0D-2p-nIv">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" " textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="e0D-2p-nIv" customClass="TSLabel" customModule="TechSaga" customModuleProvider="target">
                                 <rect key="frame" x="12" y="147.33333333333334" width="264" height="26.666666666666657"/>
                                 <fontDescription key="fontDescription" name="RobotoSlab-Regular" family="Roboto Slab" pointSize="20"/>
                                 <color key="textColor" name="F2F2F2"/>
@@ -73,20 +73,12 @@
                             <constraint firstAttribute="bottom" secondItem="ruW-SJ-chq" secondAttribute="bottom" id="x9J-wL-Kcb"/>
                         </constraints>
                     </view>
-                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7N1-yv-aTc">
-                        <rect key="frame" x="16" y="12" width="288" height="226"/>
-                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                    </view>
                 </subviews>
                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                 <constraints>
                     <constraint firstItem="jNm-rc-EJq" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="12" id="5do-8A-kDL"/>
-                    <constraint firstAttribute="bottom" secondItem="7N1-yv-aTc" secondAttribute="bottom" constant="12" id="87A-rY-SAT"/>
                     <constraint firstAttribute="bottom" secondItem="jNm-rc-EJq" secondAttribute="bottom" constant="12" id="99D-dm-yz5"/>
                     <constraint firstAttribute="trailing" secondItem="jNm-rc-EJq" secondAttribute="trailing" constant="16" id="HGn-pJ-SyE"/>
-                    <constraint firstItem="7N1-yv-aTc" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="16" id="N8B-Pm-SAI"/>
-                    <constraint firstAttribute="trailing" secondItem="7N1-yv-aTc" secondAttribute="trailing" constant="16" id="eNe-9m-LiB"/>
-                    <constraint firstItem="7N1-yv-aTc" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="12" id="fek-a2-1BN"/>
                     <constraint firstItem="jNm-rc-EJq" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="16" id="sdT-f0-C54"/>
                 </constraints>
             </tableViewCellContentView>
@@ -94,7 +86,6 @@
             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <connections>
                 <outlet property="cornerView" destination="jNm-rc-EJq" id="d5k-UO-WVv"/>
-                <outlet property="itemBoderView" destination="7N1-yv-aTc" id="7Kr-88-nih"/>
                 <outlet property="itemDateLabel" destination="u2b-sc-tkg" id="dBh-Ok-FD2"/>
                 <outlet property="itemImageView" destination="ruW-SJ-chq" id="W6t-76-XHR"/>
                 <outlet property="itemNameLabel" destination="iDm-IP-mUv" id="enL-Uw-tg0"/>

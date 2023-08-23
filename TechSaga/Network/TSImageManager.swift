@@ -2,7 +2,7 @@
 //  TSImageManager.swift
 //  TechSaga
 //
-//  Created by Rishabh Jain on 23/08/23.
+//  Created by Harshit Jain on 23/08/23.
 //
 
 import Foundation
@@ -22,7 +22,7 @@ let imageCache = NSCache<AnyObject, UIImage>()
 
 class TSImageManager {
     
-    class func downloadImage(imageView: UIImageView, imageURL: String?, placeholderImage : UIImage? = #imageLiteral(resourceName: "launchLogo"), completionHandler: ((UIImage?) -> Void)? = nil) {
+    class func downloadImage(imageView: UIImageView, imageURL: String?, placeholderImage : UIImage? = nil, completionHandler: ((UIImage?) -> Void)? = nil) {
         
         if let _imageURL = imageURL {
             if let cachedImage = imageCache.object(forKey: _imageURL as AnyObject) {
@@ -33,7 +33,7 @@ class TSImageManager {
                 if let url = URL(string: _imageURL) {
                     imageView.sd_setImage(with: url, completed: { (image, _, _, _) in
                         if image == nil {
-                            completionHandler?(placeholderImage)
+                            completionHandler?(nil)
                         } else {
                             imageCache.setObject(image!, forKey: _imageURL as AnyObject)
                             completionHandler?(image)

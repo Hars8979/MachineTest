@@ -20,7 +20,7 @@ class TSActionManager {
         switch redirectionType {
         case .auth: performAuthAction(action: action, sourceVC: sourceVC)
         case .home: performHomeAction(action: action, sourceVC: sourceVC)
-        case .detail: break
+        case .detail: performDetailAction(action: action, sourceVC: sourceVC)
         }
     }
     
@@ -46,15 +46,19 @@ class TSActionManager {
         }
     }
     
+    fileprivate class func performDetailAction(action: TSAction, sourceVC : UIViewController?) {
+        if let detailViewC = StoryBoardHelper.controller(.home , type: TSDetailViewC.self),
+           let params = action.actionParams, let articleData = params.articleData{
+            detailViewC.detailViewModel = TSDetailViewModel(newsArticleData: articleData)
+            self.show(detailViewC, action: action, sourceVC: sourceVC, animation: true)
+        }
+    }
+    
     fileprivate class func show(_ controller : UIViewController, action : TSAction?, sourceVC : UIViewController?, animation : Bool = true) {
         if sourceVC != nil {
             if let navigationController = (sourceVC as? UINavigationController) ?? sourceVC?.navigationController {
                 navigationController.pushViewController(controller, animated:animation)
             }
         }
-    }
-    
-    fileprivate class func navigationController(_ sourceVC : UIViewController?) -> UINavigationController? {
-        return (sourceVC as? UINavigationController) ?? sourceVC?.navigationController
     }
 }

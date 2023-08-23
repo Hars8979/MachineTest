@@ -21,11 +21,6 @@ protocol CommonNavigationBar {
 
 extension UIViewController {
     
-    var topbarHeight: CGFloat {
-        return (view.window?.windowScene?.statusBarManager?.statusBarFrame.height ?? 0.0) +
-        (self.navigationController?.navigationBar.frame.height ?? 0.0)
-    }
-    
     @objc func leftButtonDidPress() {
         if let navigationController = self.navigationController {
             if navigationController.viewControllers.count > 1 {
@@ -49,7 +44,6 @@ extension CommonNavigationBar where Self: UIViewController {
             leftTitleLabel.textAlignment = .center
             self.navigationItem.titleView = leftTitleLabel
             leftTitleLabel.frame = self.navigationController!.navigationBar.bounds
-            self.navigationController?.navigationBar.barTintColor = UIColor.black
         }
     }
     
@@ -57,7 +51,7 @@ extension CommonNavigationBar where Self: UIViewController {
         if let navigationController = self.navigationController {
             navigationController.interactivePopGestureRecognizer?.isEnabled = true
             if navigationController.viewControllers.count > 1 {
-                let barButton = UIBarButtonItem(image: UIImage(named: "")?.withRenderingMode(UIImage.RenderingMode.alwaysOriginal) , style: .plain, target: self, action: #selector(leftButtonDidPress))
+                let barButton = UIBarButtonItem(image: UIImage(named: "back")?.withRenderingMode(UIImage.RenderingMode.alwaysOriginal) , style: .plain, target: self, action: #selector(leftButtonDidPress))
                 self.navigationItem.leftBarButtonItems = [barButton]
                 self.navigationItem.backBarButtonItem = nil
             }

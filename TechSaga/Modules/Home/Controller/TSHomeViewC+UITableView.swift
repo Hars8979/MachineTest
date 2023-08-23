@@ -17,7 +17,7 @@ extension TSHomeViewC: UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        guard let newsListTVC = tableView.dequeueReusableCell(withIdentifier: "NewsListTVC", for: indexPath) as? NewsListTVC else { return UITableViewCell() }
+        guard let newsListTVC = tableView.dequeueReusableCell(withIdentifier: "TSNewsListTVC", for: indexPath) as? TSNewsListTVC else { return UITableViewCell() }
         newsListTVC.newsArticleData = homeViewModel.getDataAt(indexPath)
         return newsListTVC
     }
@@ -27,6 +27,13 @@ extension TSHomeViewC: UITableViewDataSource {
         UIView.animate(withDuration: 0.5, delay: 0.05 * Double(indexPath.row), animations: {
             cell.alpha = 1
         })
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let params = TSDetailActionParam()
+        params.articleData = homeViewModel.getDataAt(indexPath)
+        let action = TSAction(redirectionType: .detail, actionParams: params)
+        TSActionManager.performAction(action: action, sourceVC: self)
     }
 }
 

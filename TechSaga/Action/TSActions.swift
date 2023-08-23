@@ -16,15 +16,14 @@ enum TSRedirectionType : String , CaseIterable {
 class TSAction {
     
     var redirectionType : TSRedirectionType?
-    var actionParams : TSActionParams?
+    var actionParams : TSDetailActionParam?
     
-    init(redirectionType: TSRedirectionType, actionParams: TSActionParams?) {
+    init(redirectionType: TSRedirectionType, actionParams: TSDetailActionParam?) {
         self.redirectionType = redirectionType
         self.actionParams = actionParams
     }
 }
 
-class TSActionParams {
-    var link : String?
-    var infoObject : Any?
+class TSDetailActionParam {
+    var articleData: NewsArticleModel?
 }
