@@ -2,7 +2,7 @@
 //  TSHomeViewC.swift
 //  TechSaga
 //
-//  Created by Rishabh Jain on 22/08/23.
+//  Created by Harshit Jain on 23/08/23.
 //
 
 import UIKit
@@ -11,11 +11,42 @@ import GoogleSignIn
 
 class TSHomeViewC: UIViewController {
     
+    //MARK: - IBOutlets
+    
+    @IBOutlet weak var indicatorView: UIActivityIndicatorView!
+    @IBOutlet private weak var tableView: UITableView!
+    
+    //MARK: - Properties
+    
+    var homeViewModel: TSHomeViewModel = TSHomeViewModel()
+    
+    override var preferredStatusBarStyle: UIStatusBarStyle {
+        return .lightContent
+    }
+    
     //MARK: - View LifeCycle
 
     override func viewDidLoad() {
         super.viewDidLoad()
         setupNavBar()
+        tableViewSetup()
+        fetchNewsHeadlines()
+    }
+    
+    fileprivate func tableViewSetup() {
+        if #available(iOS 15.0, *) {
+            tableView.sectionHeaderTopPadding = 0
+        }
+        tableView.register(["NewsListTVC"])
+    }
+    
+    fileprivate func fetchNewsHeadlines() {
+        homeViewModel.getHeadlines() { [weak self] in
+            DispatchQueue.main.async {
+                self?.indicatorView.isHidden = true
+                self?.tableView.reloadData()
+            }
+        }
     }
     
     fileprivate func redirectToAuth() {
@@ -23,9 +54,8 @@ class TSHomeViewC: UIViewController {
         TSActionManager.performAction(action: action, sourceVC: self)
     }
     
-   
-    }
-
+    
+}
 
 //MARK: - CommonNavigationBar
 
@@ -33,6 +63,7 @@ extension TSHomeViewC: CommonNavigationBar {
     
     fileprivate func setupNavBar() {
         addLabel(title: .headLines, textColor: .white, font: UIFont(29, .bold))
+        
     }
 }
 

@@ -3,7 +3,9 @@
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -14,13 +16,47 @@
                     <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="i2x-Rp-bZL">
+                                <rect key="frame" x="0.0" y="59" width="393" height="759"/>
+                                <color key="backgroundColor" name="464646"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="Y6W-OH-hqX" id="dE5-9B-OT7"/>
+                                    <outlet property="delegate" destination="Y6W-OH-hqX" id="3zm-2X-bnV"/>
+                                </connections>
+                            </tableView>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" animating="YES" style="large" translatesAutoresizingMaskIntoConstraints="NO" id="O4Z-Bb-qua">
+                                <rect key="frame" x="178" y="407.66666666666669" width="37" height="37"/>
+                                <color key="color" systemColor="labelColor"/>
+                            </activityIndicatorView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
-                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" systemColor="labelColor"/>
+                        <constraints>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="i2x-Rp-bZL" secondAttribute="bottom" id="7pr-fw-fep"/>
+                            <constraint firstItem="i2x-Rp-bZL" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="SOm-3x-7W5"/>
+                            <constraint firstItem="O4Z-Bb-qua" firstAttribute="centerY" secondItem="5EZ-qb-Rvc" secondAttribute="centerY" id="hmF-rs-G8j"/>
+                            <constraint firstItem="i2x-Rp-bZL" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" id="mnC-XI-qcO"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="i2x-Rp-bZL" secondAttribute="trailing" id="qo4-U2-lP9"/>
+                            <constraint firstItem="O4Z-Bb-qua" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="xAc-Jg-SxG"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="indicatorView" destination="O4Z-Bb-qua" id="HYg-xo-yaC"/>
+                        <outlet property="tableView" destination="i2x-Rp-bZL" id="ljs-0H-YlJ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="103" y="-2"/>
         </scene>
     </scenes>
+    <resources>
+        <namedColor name="464646">
+            <color red="0.27450980392156865" green="0.27450980392156865" blue="0.27450980392156865" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="labelColor">
+            <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
 </document>

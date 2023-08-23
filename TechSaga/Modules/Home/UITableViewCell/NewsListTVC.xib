@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21679"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="RobotoSlab-Bold.ttf">
+            <string>RobotoSlab-Bold</string>
+        </array>
+        <array key="RobotoSlab-Regular.ttf">
+            <string>RobotoSlab-Regular</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" id="KGk-i7-Jjw" customClass="NewsListTVC" customModule="TechSaga" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="250"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="250"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jNm-rc-EJq">
+                        <rect key="frame" x="16" y="12" width="288" height="226"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="launchLogo" translatesAutoresizingMaskIntoConstraints="NO" id="ruW-SJ-chq" customClass="TSImageView" customModule="TechSaga" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="0.0" width="288" height="226"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="226" id="Xgh-ta-Bmh"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" " textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="e0D-2p-nIv">
+                                <rect key="frame" x="12" y="147.33333333333334" width="264" height="26.666666666666657"/>
+                                <fontDescription key="fontDescription" name="RobotoSlab-Regular" family="Roboto Slab" pointSize="20"/>
+                                <color key="textColor" name="F2F2F2"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iDm-IP-mUv">
+                                <rect key="frame" x="12" y="198" width="3" height="16"/>
+                                <fontDescription key="fontDescription" name="RobotoSlab-Bold" family="Roboto Slab" pointSize="12"/>
+                                <color key="textColor" name="BABABA"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="u2b-sc-tkg">
+                                <rect key="frame" x="27" y="198" width="3" height="16"/>
+                                <fontDescription key="fontDescription" name="RobotoSlab-Regular" family="Roboto Slab" pointSize="12"/>
+                                <color key="textColor" name="BABABA"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="u2b-sc-tkg" firstAttribute="bottom" secondItem="iDm-IP-mUv" secondAttribute="bottom" id="1GJ-Ky-zb0"/>
+                            <constraint firstAttribute="bottom" secondItem="iDm-IP-mUv" secondAttribute="bottom" constant="12" id="6z0-T5-dkf"/>
+                            <constraint firstItem="iDm-IP-mUv" firstAttribute="top" secondItem="e0D-2p-nIv" secondAttribute="bottom" constant="24" id="BKu-tP-mpf"/>
+                            <constraint firstItem="ruW-SJ-chq" firstAttribute="top" secondItem="jNm-rc-EJq" secondAttribute="top" id="BuF-2u-qQX"/>
+                            <constraint firstItem="e0D-2p-nIv" firstAttribute="top" relation="greaterThanOrEqual" secondItem="jNm-rc-EJq" secondAttribute="top" constant="24" id="DYk-Kv-LPU"/>
+                            <constraint firstAttribute="trailing" secondItem="e0D-2p-nIv" secondAttribute="trailing" constant="12" id="Kqm-t1-eak"/>
+                            <constraint firstItem="u2b-sc-tkg" firstAttribute="leading" secondItem="iDm-IP-mUv" secondAttribute="trailing" constant="12" id="RW7-bz-CjI"/>
+                            <constraint firstItem="ruW-SJ-chq" firstAttribute="leading" secondItem="jNm-rc-EJq" secondAttribute="leading" id="Uoc-GA-No9"/>
+                            <constraint firstAttribute="trailing" secondItem="ruW-SJ-chq" secondAttribute="trailing" id="fjK-KM-5xN"/>
+                            <constraint firstItem="iDm-IP-mUv" firstAttribute="leading" secondItem="jNm-rc-EJq" secondAttribute="leading" constant="12" id="gIQ-Wp-wq8"/>
+                            <constraint firstItem="e0D-2p-nIv" firstAttribute="leading" secondItem="iDm-IP-mUv" secondAttribute="leading" id="iCC-ko-88Y"/>
+                            <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="u2b-sc-tkg" secondAttribute="trailing" constant="12" id="lJB-hw-p7E"/>
+                            <constraint firstItem="u2b-sc-tkg" firstAttribute="top" secondItem="iDm-IP-mUv" secondAttribute="top" id="p9Y-HR-Btr"/>
+                            <constraint firstAttribute="bottom" secondItem="ruW-SJ-chq" secondAttribute="bottom" id="x9J-wL-Kcb"/>
+                        </constraints>
+                    </view>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7N1-yv-aTc">
+                        <rect key="frame" x="16" y="12" width="288" height="226"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </view>
+                </subviews>
+                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                <constraints>
+                    <constraint firstItem="jNm-rc-EJq" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="12" id="5do-8A-kDL"/>
+                    <constraint firstAttribute="bottom" secondItem="7N1-yv-aTc" secondAttribute="bottom" constant="12" id="87A-rY-SAT"/>
+                    <constraint firstAttribute="bottom" secondItem="jNm-rc-EJq" secondAttribute="bottom" constant="12" id="99D-dm-yz5"/>
+                    <constraint firstAttribute="trailing" secondItem="jNm-rc-EJq" secondAttribute="trailing" constant="16" id="HGn-pJ-SyE"/>
+                    <constraint firstItem="7N1-yv-aTc" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="16" id="N8B-Pm-SAI"/>
+                    <constraint firstAttribute="trailing" secondItem="7N1-yv-aTc" secondAttribute="trailing" constant="16" id="eNe-9m-LiB"/>
+                    <constraint firstItem="7N1-yv-aTc" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="12" id="fek-a2-1BN"/>
+                    <constraint firstItem="jNm-rc-EJq" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="16" id="sdT-f0-C54"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <connections>
+                <outlet property="cornerView" destination="jNm-rc-EJq" id="d5k-UO-WVv"/>
+                <outlet property="itemBoderView" destination="7N1-yv-aTc" id="7Kr-88-nih"/>
+                <outlet property="itemDateLabel" destination="u2b-sc-tkg" id="dBh-Ok-FD2"/>
+                <outlet property="itemImageView" destination="ruW-SJ-chq" id="W6t-76-XHR"/>
+                <outlet property="itemNameLabel" destination="iDm-IP-mUv" id="enL-Uw-tg0"/>
+                <outlet property="itemTitleLabel" destination="e0D-2p-nIv" id="Pdr-4S-f6W"/>
+            </connections>
+            <point key="canvasLocation" x="138.93129770992365" y="19.718309859154932"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="launchLogo" width="480" height="480"/>
+        <namedColor name="BABABA">
+            <color red="0.72941176470588232" green="0.72941176470588232" blue="0.72941176470588232" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="F2F2F2">
+            <color red="0.94901960784313721" green="0.94901960784313721" blue="0.94901960784313721" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>

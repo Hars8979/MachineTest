@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		0323E4E415481C59E0D56F2F /* Pods_TechSaga.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 585DE56FC9AB99CA10A49071 /* Pods_TechSaga.framework */; };
+		4F1CAE402A95F02000B88AD3 /* TSNewsEntity+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F1CAE3F2A95F02000B88AD3 /* TSNewsEntity+CoreDataClass.swift */; };
+		4F1CAE422A95F02600B88AD3 /* TSNewsEntity+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F1CAE412A95F02600B88AD3 /* TSNewsEntity+CoreDataProperties.swift */; };
 		65ACFCAB2A93E4BB00B8FB1C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65ACFCAA2A93E4BB00B8FB1C /* AppDelegate.swift */; };
 		65ACFCAD2A93E4BB00B8FB1C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65ACFCAC2A93E4BB00B8FB1C /* SceneDelegate.swift */; };
 		65ACFCAF2A93E4BB00B8FB1C /* TSAuthViewC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65ACFCAE2A93E4BB00B8FB1C /* TSAuthViewC.swift */; };
@@ -29,9 +31,21 @@
 		65CD505B2A9485D30024D881 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 65CD505A2A9485D30024D881 /* GoogleService-Info.plist */; };
 		65CD50632A948D7A0024D881 /* TSHomeViewC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65CD50622A948D7A0024D881 /* TSHomeViewC.swift */; };
 		65CD50672A948DBB0024D881 /* TSLaunchViewC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65CD50662A948DBB0024D881 /* TSLaunchViewC.swift */; };
+		65CD50692A949CDC0024D881 /* TSCoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65CD50682A949CDC0024D881 /* TSCoreDataManager.swift */; };
+		65CD506B2A94A1E00024D881 /* TSNetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65CD506A2A94A1E00024D881 /* TSNetworkManager.swift */; };
+		65CD506E2A94A3E00024D881 /* NewsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65CD506D2A94A3E00024D881 /* NewsModel.swift */; };
+		65CD50702A94A4BC0024D881 /* TSHomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65CD506F2A94A4BC0024D881 /* TSHomeViewModel.swift */; };
+		65CD50782A94A7570024D881 /* TSHeadlinesRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65CD50772A94A7570024D881 /* TSHeadlinesRepository.swift */; };
+		65CD507C2A94B5A50024D881 /* NewsListTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65CD507A2A94B5A50024D881 /* NewsListTVC.swift */; };
+		65CD507D2A94B5A50024D881 /* NewsListTVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 65CD507B2A94B5A50024D881 /* NewsListTVC.xib */; };
+		65CD507F2A94B7760024D881 /* TSHomeViewC+UITableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65CD507E2A94B7760024D881 /* TSHomeViewC+UITableView.swift */; };
+		65CD50812A94BA660024D881 /* TSImageManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65CD50802A94BA660024D881 /* TSImageManager.swift */; };
+		65CD50832A94BF6B0024D881 /* UIString.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65CD50822A94BF6B0024D881 /* UIString.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		4F1CAE3F2A95F02000B88AD3 /* TSNewsEntity+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "TSNewsEntity+CoreDataClass.swift"; sourceTree = "<group>"; };
+		4F1CAE412A95F02600B88AD3 /* TSNewsEntity+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "TSNewsEntity+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		585DE56FC9AB99CA10A49071 /* Pods_TechSaga.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TechSaga.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		65ACFCA72A93E4BB00B8FB1C /* TechSaga.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TechSaga.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		65ACFCAA2A93E4BB00B8FB1C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -56,6 +70,16 @@
 		65CD505A2A9485D30024D881 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		65CD50622A948D7A0024D881 /* TSHomeViewC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TSHomeViewC.swift; sourceTree = "<group>"; };
 		65CD50662A948DBB0024D881 /* TSLaunchViewC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TSLaunchViewC.swift; sourceTree = "<group>"; };
+		65CD50682A949CDC0024D881 /* TSCoreDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TSCoreDataManager.swift; sourceTree = "<group>"; };
+		65CD506A2A94A1E00024D881 /* TSNetworkManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TSNetworkManager.swift; sourceTree = "<group>"; };
+		65CD506D2A94A3E00024D881 /* NewsModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewsModel.swift; sourceTree = "<group>"; };
+		65CD506F2A94A4BC0024D881 /* TSHomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TSHomeViewModel.swift; sourceTree = "<group>"; };
+		65CD50772A94A7570024D881 /* TSHeadlinesRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TSHeadlinesRepository.swift; sourceTree = "<group>"; };
+		65CD507A2A94B5A50024D881 /* NewsListTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsListTVC.swift; sourceTree = "<group>"; };
+		65CD507B2A94B5A50024D881 /* NewsListTVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NewsListTVC.xib; sourceTree = "<group>"; };
+		65CD507E2A94B7760024D881 /* TSHomeViewC+UITableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TSHomeViewC+UITableView.swift"; sourceTree = "<group>"; };
+		65CD50802A94BA660024D881 /* TSImageManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TSImageManager.swift; sourceTree = "<group>"; };
+		65CD50822A94BF6B0024D881 /* UIString.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIString.swift; sourceTree = "<group>"; };
 		7AC735153D67D872010BF7EA /* Pods-TechSaga.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TechSaga.debug.xcconfig"; path = "Target Support Files/Pods-TechSaga/Pods-TechSaga.debug.xcconfig"; sourceTree = "<group>"; };
 		8E3764CE3629BD8865DBADAF /* Pods-TechSaga.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TechSaga.release.xcconfig"; path = "Target Support Files/Pods-TechSaga/Pods-TechSaga.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -109,7 +133,6 @@
 				65ACFCD32A93E60300B8FB1C /* Constants */,
 				65ACFCC62A93E51600B8FB1C /* CoreData */,
 				65ACFCC72A93E52000B8FB1C /* CustomResources */,
-				65ACFCC92A93E53100B8FB1C /* Managers */,
 				65ACFCC22A93E4DF00B8FB1C /* Modules */,
 				65ACFCCA2A93E53C00B8FB1C /* Network */,
 				65ACFCCB2A93E54600B8FB1C /* Storyboard */,
@@ -163,6 +186,7 @@
 		65ACFCC52A93E50D00B8FB1C /* CodableModels */ = {
 			isa = PBXGroup;
 			children = (
+				65CD506D2A94A3E00024D881 /* NewsModel.swift */,
 			);
 			path = CodableModels;
 			sourceTree = "<group>";
@@ -170,6 +194,8 @@
 		65ACFCC62A93E51600B8FB1C /* CoreData */ = {
 			isa = PBXGroup;
 			children = (
+				65CD50762A94A74C0024D881 /* Repo */,
+				65CD50752A94A7410024D881 /* Models */,
 				65ACFCB32A93E4BB00B8FB1C /* TechSaga.xcdatamodeld */,
 			);
 			path = CoreData;
@@ -183,16 +209,11 @@
 			path = CustomResources;
 			sourceTree = "<group>";
 		};
-		65ACFCC92A93E53100B8FB1C /* Managers */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Managers;
-			sourceTree = "<group>";
-		};
 		65ACFCCA2A93E53C00B8FB1C /* Network */ = {
 			isa = PBXGroup;
 			children = (
+				65CD506A2A94A1E00024D881 /* TSNetworkManager.swift */,
+				65CD50802A94BA660024D881 /* TSImageManager.swift */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -211,6 +232,7 @@
 			children = (
 				65ACFCE42A93EAF700B8FB1C /* UIFonts.swift */,
 				65ACFCE32A93EAF700B8FB1C /* UITableView.swift */,
+				65CD50822A94BF6B0024D881 /* UIString.swift */,
 			);
 			path = UIExtension;
 			sourceTree = "<group>";
@@ -251,6 +273,8 @@
 		65CD50602A948D690024D881 /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				65CD50792A94B58A0024D881 /* UITableViewCell */,
+				65CD506C2A94A2530024D881 /* ViewModel */,
 				65CD50612A948D6E0024D881 /* Controller */,
 			);
 			path = Home;
@@ -260,6 +284,7 @@
 			isa = PBXGroup;
 			children = (
 				65CD50622A948D7A0024D881 /* TSHomeViewC.swift */,
+				65CD507E2A94B7760024D881 /* TSHomeViewC+UITableView.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -279,6 +304,41 @@
 				65CD50662A948DBB0024D881 /* TSLaunchViewC.swift */,
 			);
 			path = Controller;
+			sourceTree = "<group>";
+		};
+		65CD506C2A94A2530024D881 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				65CD506F2A94A4BC0024D881 /* TSHomeViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		65CD50752A94A7410024D881 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				65CD50682A949CDC0024D881 /* TSCoreDataManager.swift */,
+				4F1CAE3F2A95F02000B88AD3 /* TSNewsEntity+CoreDataClass.swift */,
+				4F1CAE412A95F02600B88AD3 /* TSNewsEntity+CoreDataProperties.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		65CD50762A94A74C0024D881 /* Repo */ = {
+			isa = PBXGroup;
+			children = (
+				65CD50772A94A7570024D881 /* TSHeadlinesRepository.swift */,
+			);
+			path = Repo;
+			sourceTree = "<group>";
+		};
+		65CD50792A94B58A0024D881 /* UITableViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				65CD507A2A94B5A50024D881 /* NewsListTVC.swift */,
+				65CD507B2A94B5A50024D881 /* NewsListTVC.xib */,
+			);
+			path = UITableViewCell;
 			sourceTree = "<group>";
 		};
 		710E0A5A125C141BFDF11F61 /* Frameworks */ = {
@@ -357,6 +417,7 @@
 				65ACFCE12A93EA6700B8FB1C /* RobotoSlab-Bold.ttf in Resources */,
 				65ACFCCE2A93E57600B8FB1C /* colors.xcassets in Resources */,
 				65ACFCB72A93E4BC00B8FB1C /* Assets.xcassets in Resources */,
+				65CD507D2A94B5A50024D881 /* NewsListTVC.xib in Resources */,
 				65ACFCB22A93E4BB00B8FB1C /* Auth.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -427,17 +488,28 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				65CD507F2A94B7760024D881 /* TSHomeViewC+UITableView.swift in Sources */,
 				65ACFCD72A93E7C800B8FB1C /* TSActions.swift in Sources */,
 				65CD50632A948D7A0024D881 /* TSHomeViewC.swift in Sources */,
 				65ACFCD52A93E61400B8FB1C /* TSMacros.swift in Sources */,
+				65CD50702A94A4BC0024D881 /* TSHomeViewModel.swift in Sources */,
+				65CD50832A94BF6B0024D881 /* UIString.swift in Sources */,
 				65ACFCAF2A93E4BB00B8FB1C /* TSAuthViewC.swift in Sources */,
 				65ACFCD92A93E7D100B8FB1C /* TSActionManager.swift in Sources */,
+				65CD50692A949CDC0024D881 /* TSCoreDataManager.swift in Sources */,
 				65ACFCDB2A93E8F900B8FB1C /* TSNavigation.swift in Sources */,
+				65CD507C2A94B5A50024D881 /* NewsListTVC.swift in Sources */,
 				65ACFCE72A93EAF700B8FB1C /* UIFonts.swift in Sources */,
+				65CD50812A94BA660024D881 /* TSImageManager.swift in Sources */,
+				65CD506E2A94A3E00024D881 /* NewsModel.swift in Sources */,
 				65CD50672A948DBB0024D881 /* TSLaunchViewC.swift in Sources */,
 				65ACFCB52A93E4BB00B8FB1C /* TechSaga.xcdatamodeld in Sources */,
 				65ACFCDD2A93E90A00B8FB1C /* TSStoryboardHelper.swift in Sources */,
 				65ACFCE62A93EAF700B8FB1C /* UITableView.swift in Sources */,
+				4F1CAE402A95F02000B88AD3 /* TSNewsEntity+CoreDataClass.swift in Sources */,
+				65CD506B2A94A1E00024D881 /* TSNetworkManager.swift in Sources */,
+				4F1CAE422A95F02600B88AD3 /* TSNewsEntity+CoreDataProperties.swift in Sources */,
+				65CD50782A94A7570024D881 /* TSHeadlinesRepository.swift in Sources */,
 				65ACFCAB2A93E4BB00B8FB1C /* AppDelegate.swift in Sources */,
 				65ACFCAD2A93E4BB00B8FB1C /* SceneDelegate.swift in Sources */,
 			);
@@ -593,6 +665,8 @@
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen.storyboard;
 				INFOPLIST_KEY_UIMainStoryboardFile = Auth;
+				INFOPLIST_KEY_UIRequiresFullScreen = NO;
+				INFOPLIST_KEY_UIStatusBarStyle = UIStatusBarStyleLightContent;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = UIInterfaceOrientationLandscapeRight;
 				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
@@ -624,6 +698,8 @@
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen.storyboard;
 				INFOPLIST_KEY_UIMainStoryboardFile = Auth;
+				INFOPLIST_KEY_UIRequiresFullScreen = NO;
+				INFOPLIST_KEY_UIStatusBarStyle = UIStatusBarStyleLightContent;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = UIInterfaceOrientationLandscapeRight;
 				IPHONEOS_DEPLOYMENT_TARGET = 16.0;

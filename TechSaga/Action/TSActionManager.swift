@@ -2,7 +2,7 @@
 //  TSActionManager.swift
 //  TechSaga
 //
-//  Created by Harshit Jain on 22/08/23.
+//  Created by Harshit Jain on 23/08/23.
 //
 
 import Foundation
@@ -29,6 +29,7 @@ class TSActionManager {
             let window =  APP_DELEGATE.window
             window?.rootViewController = nil
             let navigationController = UINavigationController(rootViewController: authViewC)
+            navigationController.navigationBar.barStyle = .black
             window?.rootViewController = navigationController
             window?.makeKeyAndVisible()
         }
@@ -39,6 +40,7 @@ class TSActionManager {
             let window =  APP_DELEGATE.window
             window?.rootViewController = nil
             let navigationController = UINavigationController(rootViewController: homeViewC)
+            navigationController.navigationBar.barStyle = .black
             window?.rootViewController = navigationController
             window?.makeKeyAndVisible()
         }

@@ -2,7 +2,7 @@
 //  TSNavigation.swift
 //  TechSaga
 //
-//  Created by Harshit Jain on 22/08/23.
+//  Created by Harshit Jain on 23/08/23.
 //
 
 import Foundation
@@ -16,6 +16,7 @@ enum NavigationBarText: String {
 protocol CommonNavigationBar {
     func addLabel(title: NavigationBarText, textColor: UIColor, font: UIFont)
     func addLeftButton()
+    func addRightButton(action: Selector?)
 }
 
 extension UIViewController {
@@ -48,6 +49,7 @@ extension CommonNavigationBar where Self: UIViewController {
             leftTitleLabel.textAlignment = .center
             self.navigationItem.titleView = leftTitleLabel
             leftTitleLabel.frame = self.navigationController!.navigationBar.bounds
+            self.navigationController?.navigationBar.barTintColor = UIColor.black
         }
     }
     
