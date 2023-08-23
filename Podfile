@@ -7,4 +7,6 @@ target 'TechSaga' do
   # Pods for TechSaga
   pod 'JGProgressHUD', '2.0.3'
   pod 'SDWebImage', '5.1'
+  pod 'Firebase/Auth'
+  pod 'GoogleSignIn', '~> 5.0.2'
 end

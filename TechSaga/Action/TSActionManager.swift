@@ -18,8 +18,29 @@ class TSActionManager {
     
     class func performRedirection(redirectionType: TSRedirectionType, action: TSAction, sourceVC: UIViewController?) {
         switch redirectionType {
-        case .home: break
+        case .auth: performAuthAction(action: action, sourceVC: sourceVC)
+        case .home: performHomeAction(action: action, sourceVC: sourceVC)
         case .detail: break
+        }
+    }
+    
+    fileprivate class func performAuthAction(action: TSAction, sourceVC : UIViewController?) {
+        if let authViewC = StoryBoardHelper.controller(.auth , type: TSAuthViewC.self) {
+            let window =  APP_DELEGATE.window
+            window?.rootViewController = nil
+            let navigationController = UINavigationController(rootViewController: authViewC)
+            window?.rootViewController = navigationController
+            window?.makeKeyAndVisible()
+        }
+    }
+    
+    fileprivate class func performHomeAction(action: TSAction, sourceVC : UIViewController?) {
+        if let homeViewC = StoryBoardHelper.controller(.home , type: TSHomeViewC.self) {
+            let window =  APP_DELEGATE.window
+            window?.rootViewController = nil
+            let navigationController = UINavigationController(rootViewController: homeViewC)
+            window?.rootViewController = navigationController
+            window?.makeKeyAndVisible()
         }
     }
     

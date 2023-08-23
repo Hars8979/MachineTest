@@ -26,6 +26,9 @@
 		65ACFCE22A93EA6700B8FB1C /* RobotoSlab-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 65ACFCE02A93EA6700B8FB1C /* RobotoSlab-Regular.ttf */; };
 		65ACFCE62A93EAF700B8FB1C /* UITableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65ACFCE32A93EAF700B8FB1C /* UITableView.swift */; };
 		65ACFCE72A93EAF700B8FB1C /* UIFonts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65ACFCE42A93EAF700B8FB1C /* UIFonts.swift */; };
+		65CD505B2A9485D30024D881 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 65CD505A2A9485D30024D881 /* GoogleService-Info.plist */; };
+		65CD50632A948D7A0024D881 /* TSHomeViewC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65CD50622A948D7A0024D881 /* TSHomeViewC.swift */; };
+		65CD50672A948DBB0024D881 /* TSLaunchViewC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65CD50662A948DBB0024D881 /* TSLaunchViewC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -50,6 +53,9 @@
 		65ACFCE02A93EA6700B8FB1C /* RobotoSlab-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "RobotoSlab-Regular.ttf"; sourceTree = "<group>"; };
 		65ACFCE32A93EAF700B8FB1C /* UITableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UITableView.swift; sourceTree = "<group>"; };
 		65ACFCE42A93EAF700B8FB1C /* UIFonts.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIFonts.swift; sourceTree = "<group>"; };
+		65CD505A2A9485D30024D881 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		65CD50622A948D7A0024D881 /* TSHomeViewC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TSHomeViewC.swift; sourceTree = "<group>"; };
+		65CD50662A948DBB0024D881 /* TSLaunchViewC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TSLaunchViewC.swift; sourceTree = "<group>"; };
 		7AC735153D67D872010BF7EA /* Pods-TechSaga.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TechSaga.debug.xcconfig"; path = "Target Support Files/Pods-TechSaga/Pods-TechSaga.debug.xcconfig"; sourceTree = "<group>"; };
 		8E3764CE3629BD8865DBADAF /* Pods-TechSaga.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TechSaga.release.xcconfig"; path = "Target Support Files/Pods-TechSaga/Pods-TechSaga.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -72,7 +78,6 @@
 				7AC735153D67D872010BF7EA /* Pods-TechSaga.debug.xcconfig */,
 				8E3764CE3629BD8865DBADAF /* Pods-TechSaga.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -113,6 +118,7 @@
 				65ACFCB62A93E4BC00B8FB1C /* Assets.xcassets */,
 				65ACFCB82A93E4BC00B8FB1C /* LaunchScreen.storyboard */,
 				65ACFCBB2A93E4BC00B8FB1C /* Info.plist */,
+				65CD505A2A9485D30024D881 /* GoogleService-Info.plist */,
 			);
 			path = TechSaga;
 			sourceTree = "<group>";
@@ -129,7 +135,9 @@
 		65ACFCC22A93E4DF00B8FB1C /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				65CD50642A948DBB0024D881 /* Launch */,
 				65ACFCD12A93E5BE00B8FB1C /* Auth */,
+				65CD50602A948D690024D881 /* Home */,
 			);
 			path = Modules;
 			sourceTree = "<group>";
@@ -240,6 +248,39 @@
 			path = Fonts;
 			sourceTree = "<group>";
 		};
+		65CD50602A948D690024D881 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				65CD50612A948D6E0024D881 /* Controller */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		65CD50612A948D6E0024D881 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				65CD50622A948D7A0024D881 /* TSHomeViewC.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		65CD50642A948DBB0024D881 /* Launch */ = {
+			isa = PBXGroup;
+			children = (
+				65CD50652A948DBB0024D881 /* Controller */,
+			);
+			name = Launch;
+			path = TechSaga/Modules/Launch;
+			sourceTree = SOURCE_ROOT;
+		};
+		65CD50652A948DBB0024D881 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				65CD50662A948DBB0024D881 /* TSLaunchViewC.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
 		710E0A5A125C141BFDF11F61 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -260,6 +301,7 @@
 				65ACFCA42A93E4BB00B8FB1C /* Frameworks */,
 				65ACFCA52A93E4BB00B8FB1C /* Resources */,
 				431B188D631AF6C43D8618B9 /* [CP] Embed Pods Frameworks */,
+				EC5F4568EA20D1F52D3E99D0 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -309,6 +351,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				65ACFCE22A93EA6700B8FB1C /* RobotoSlab-Regular.ttf in Resources */,
+				65CD505B2A9485D30024D881 /* GoogleService-Info.plist in Resources */,
 				65ACFCBA2A93E4BC00B8FB1C /* LaunchScreen.storyboard in Resources */,
 				65ACFCD02A93E5A000B8FB1C /* Home.storyboard in Resources */,
 				65ACFCE12A93EA6700B8FB1C /* RobotoSlab-Bold.ttf in Resources */,
@@ -360,6 +403,23 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
+		EC5F4568EA20D1F52D3E99D0 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-TechSaga/Pods-TechSaga-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-TechSaga/Pods-TechSaga-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-TechSaga/Pods-TechSaga-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -368,11 +428,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				65ACFCD72A93E7C800B8FB1C /* TSActions.swift in Sources */,
+				65CD50632A948D7A0024D881 /* TSHomeViewC.swift in Sources */,
 				65ACFCD52A93E61400B8FB1C /* TSMacros.swift in Sources */,
 				65ACFCAF2A93E4BB00B8FB1C /* TSAuthViewC.swift in Sources */,
 				65ACFCD92A93E7D100B8FB1C /* TSActionManager.swift in Sources */,
 				65ACFCDB2A93E8F900B8FB1C /* TSNavigation.swift in Sources */,
 				65ACFCE72A93EAF700B8FB1C /* UIFonts.swift in Sources */,
+				65CD50672A948DBB0024D881 /* TSLaunchViewC.swift in Sources */,
 				65ACFCB52A93E4BB00B8FB1C /* TechSaga.xcdatamodeld in Sources */,
 				65ACFCDD2A93E90A00B8FB1C /* TSStoryboardHelper.swift in Sources */,
 				65ACFCE62A93EAF700B8FB1C /* UITableView.swift in Sources */,
@@ -533,7 +595,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Auth;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = UIInterfaceOrientationLandscapeRight;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -564,7 +626,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Auth;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = UIInterfaceOrientationLandscapeRight;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

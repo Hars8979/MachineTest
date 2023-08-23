@@ -45,7 +45,7 @@ extension CommonNavigationBar where Self: UIViewController {
             leftTitleLabel.text = title.rawValue
             leftTitleLabel.textColor = textColor
             leftTitleLabel.font = font
-            leftTitleLabel.textAlignment = .left
+            leftTitleLabel.textAlignment = .center
             self.navigationItem.titleView = leftTitleLabel
             leftTitleLabel.frame = self.navigationController!.navigationBar.bounds
         }
@@ -59,6 +59,15 @@ extension CommonNavigationBar where Self: UIViewController {
                 self.navigationItem.leftBarButtonItems = [barButton]
                 self.navigationItem.backBarButtonItem = nil
             }
+        }
+    }
+    
+    func addRightButton(action: Selector?) {
+        if let navigationController = self.navigationController {
+            navigationController.interactivePopGestureRecognizer?.isEnabled = true
+            let barButton = UIBarButtonItem(image: UIImage(named: "logout")?.withRenderingMode(UIImage.RenderingMode.alwaysOriginal) , style: .plain, target: self, action: action)
+            self.navigationItem.rightBarButtonItems = [barButton]
+            self.navigationItem.backBarButtonItem = nil
         }
     }
 }

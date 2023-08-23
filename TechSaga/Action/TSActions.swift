@@ -8,6 +8,7 @@
 import Foundation
 
 enum TSRedirectionType : String , CaseIterable {
+    case auth = "TSAuthViewC"
     case home = "TSHomeViewC"
     case detail = "TSDetailViewC"
 }
